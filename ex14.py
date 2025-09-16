@@ -43,5 +43,3 @@ while popit < 6:
     if popit == 5:
         print("Проигрыш!")
         break
-    
-    popit
