@@ -23,7 +23,7 @@ def triToWords(n, female=False):
             w.append(ed[u])
     return " ".join(w)
 
-def suffix(n, forms):
+def ending(n, forms):
     n = n % 100
     if 11 <= n <= 19:
         return forms[2]
@@ -45,13 +45,14 @@ else:
     
     if millions > 0:
         parts.append(triToWords(millions))
-        parts.append(suffix(millions, ("миллион", "миллиона", "миллионов")))
+        parts.append(ending(millions, ("миллион", "миллиона", "миллионов")))
     if tisah > 0:
         parts.append(triToWords(tisah, True))
-        parts.append(suffix(tisah, ("тысяча", "тысячи", "тысяч")))
+        parts.append(ending(tisah, ("тысяча", "тысячи", "тысяч")))
     if hundNum > 0:
         parts.append(triToWords(hundNum))
 
     print(" ".join(parts))
+
 
 
