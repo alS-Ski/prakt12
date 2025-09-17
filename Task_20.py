@@ -38,9 +38,9 @@ num = int(input())
 if num == 0:
     print("ноль")
 else:
-    millions = num // 1_000_000
-    tisah = (num // 1_000) % 1_000
-    hundNum = num % 1_000
+    millions = num // 1000000
+    tisah = (num // 1000) % 1000
+    hundNum = num % 1000
     parts = []
     
     if millions > 0:
@@ -53,4 +53,5 @@ else:
         parts.append(triToWords(hundNum))
 
     print(" ".join(parts))
+
 
